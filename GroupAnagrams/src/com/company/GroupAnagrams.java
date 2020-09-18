@@ -13,25 +13,25 @@ public class GroupAnagrams {
         for (int i = 0; i < strs.length; i++) {
             if (!strs[i].isEmpty()) {
                 item.add(strs[i]);
+                System.out.println("item added from index : " + i + " : " + item.get(item.size() - 1));
                 currentStr = strs[i];
                 strs[i] = "";
                 System.out.println("comparing string : " + currentStr);
                 char[] currentChar = currentStr.toCharArray();
                 Arrays.sort(currentChar);
-                System.out.println("sorted value: " + String.valueOf(currentChar));
                 for (int j = i + 1; j < strs.length; j++) {
                     char[] c = strs[j].toCharArray();
                     Arrays.sort(c);
                     if (String.valueOf(c).equals(String.valueOf(currentChar))) {
-                        System.out.println("item added in index : " + j + " : " + strs[j]);
                         item.add(strs[j]);
+                        System.out.println("item added from index : " + j + " : " + item.get(item.size() - 1));
                         System.out.println("item size : " + item.size());
                         strs[j] = "";
                     }
                 }
 
                 anagrams.add(item);
-                System.out.println("anagrams size : " + anagrams.size());
+                System.out.println("anagrams size : " + anagrams.size() + " last item " + anagrams.get(anagrams.size() - 1).get(0));
                 item.clear();
             }
         }
