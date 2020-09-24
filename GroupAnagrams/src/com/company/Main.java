@@ -18,7 +18,10 @@ public class Main {
             System.out.println();
         }*/
 
-        HackerRankValidBinaryString validBinaryString = new HackerRankValidBinaryString();
-        System.out.println(validBinaryString.minimumMoves("00011111", 2));
+        /*HackerRankValidBinaryString validBinaryString = new HackerRankValidBinaryString();
+        System.out.println(validBinaryString.minimumMoves("00011111", 2));*/
+
+        HackerRankBeautifulBinaryString beautifulBinaryString = new HackerRankBeautifulBinaryString();
+        System.out.println(beautifulBinaryString.beautifulBinaryString("0100101010"));
     }
 }
