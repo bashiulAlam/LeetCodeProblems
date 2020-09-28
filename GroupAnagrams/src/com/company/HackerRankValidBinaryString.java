@@ -12,7 +12,7 @@ public class HackerRankValidBinaryString {
             if (!subStr.contains("1")) {
                 minimumMoves++;
                 char[] c = s.toCharArray();
-                c[subStr.length() - 1] = '1';
+                c[i + subStr.length() - 1] = '1';
                 s = String.valueOf(c);
                 System.out.println("changed string " + s + ", for " + subStr);
             }
